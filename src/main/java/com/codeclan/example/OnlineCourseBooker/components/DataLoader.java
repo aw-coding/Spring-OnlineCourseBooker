@@ -56,6 +56,9 @@ public class DataLoader implements ApplicationRunner {
         Course tattoo101 = new Course("Tattoo 101", "Granton", 2.90);
         courseRepository.save(tattoo101);
 
+        Course hairHeaven = new Course("Hair Heaven", "Liberton", 3.50);
+        courseRepository.save(hairHeaven);
+
 
         Booking booking1 = new Booking ("01-01-2021", alex, nailArt);
         bookingRepository.save(booking1);
@@ -68,6 +71,9 @@ public class DataLoader implements ApplicationRunner {
 
         Booking booking4 = new Booking ("01-05-2021", evelyn, health101);
         bookingRepository.save(booking4);
+
+        Booking booking5 = new Booking("03-05-2021", mila, hairHeaven);
+        bookingRepository.save(booking5);
 
 
 

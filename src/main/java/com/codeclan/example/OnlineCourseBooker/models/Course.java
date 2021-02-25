@@ -22,7 +22,7 @@ public class Course {
     private String town;
 
     @Column(name="rating")
-    private double rating;
+    private Double rating;
 
 
     @OneToMany(mappedBy = "course")
@@ -32,7 +32,7 @@ public class Course {
 
 
 
-    public Course(String name, String town, double rating) {
+    public Course(String name, String town, Double rating) {
         this.name = name;
         this.town = town;
         this.rating = rating;
@@ -65,11 +65,11 @@ public class Course {
         this.town = town;
     }
 
-    public double getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(double rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 }

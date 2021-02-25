@@ -1,7 +1,10 @@
 package com.codeclan.example.OnlineCourseBooker.controllers;
 
 
+import com.codeclan.example.OnlineCourseBooker.models.Booking;
+import com.codeclan.example.OnlineCourseBooker.models.Course;
 import com.codeclan.example.OnlineCourseBooker.models.Customer;
+import com.codeclan.example.OnlineCourseBooker.repositories.BookingRepository;
 import com.codeclan.example.OnlineCourseBooker.repositories.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,9 +22,12 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
+    @Autowired
+    BookingRepository bookingRepository;
+
 //    GET /resources (done)
 //    GET /resources/{id} (done)
-//    GET /resources?property=value
+//    GET /resources?property=value (done)
 //    POST /resources
 //    PUT /resources/{id}
 //    DELETE /resources/{id}
@@ -49,13 +55,25 @@ public class CustomerController {
             return new ResponseEntity(customerRepository.findCustomerByName(name), HttpStatus.OK);
         }
         //get customers by age
-//        if (age != null){
-//            return new ResponseEntity(customerRepository.findCustomerByAge(age), HttpStatus.OK);
-//        }
+        if (age != null){
+            return new ResponseEntity(customerRepository.findCustomerByAge(age), HttpStatus.OK);
+        }
         return new ResponseEntity(customerRepository.findAll(), HttpStatus.OK);
 
 
     }
+
+
+//    @GetMapping(value = "/customers")
+//    public ResponseEntity getAllCustomersByCourse(
+//            //@RequestParam(required = false, name = "courseName") String courseName;
+//            @RequestParam(required = false, name = "course") Course course;
+//    ){
+//        List<Booking> listOfBookings = bookingRepository.findBookingsByCourse(course);
+//
+//        List<Customer> customersOnCourse = listOfBookings.
+//    }
+//    //return new ResponseEntity()
 
 }
 

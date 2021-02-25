@@ -1,5 +1,6 @@
 package com.codeclan.example.OnlineCourseBooker.repositories;
 
+import com.codeclan.example.OnlineCourseBooker.models.Course;
 import com.codeclan.example.OnlineCourseBooker.models.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -12,6 +13,8 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
     public List<Customer> findCustomerByAge(Integer age);
 
     public List<Customer> findCustomerByName(String name);
+
+    //public List<Customer> findAllCustomersByCourse(Course course);
 
 
 
