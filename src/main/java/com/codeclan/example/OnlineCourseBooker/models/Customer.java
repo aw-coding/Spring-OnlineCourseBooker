@@ -21,7 +21,7 @@ public class Customer {
     private String town;
 
     @Column(name="age")
-    private int age;
+    private Integer age;
 
     @OneToMany(mappedBy="customer")
     @JsonIgnoreProperties({"customer"})
@@ -31,7 +31,7 @@ public class Customer {
 
 
 
-    public Customer(String name, String town, int age) {
+    public Customer(String name, String town, Integer age) {
         this.name = name;
         this.town = town;
         this.age = age;
