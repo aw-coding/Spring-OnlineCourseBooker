@@ -4,4 +4,7 @@ import com.codeclan.example.OnlineCourseBooker.models.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
+
+
+//    Get all bookings for a given date
 }
