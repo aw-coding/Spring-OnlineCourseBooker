@@ -32,7 +32,7 @@ public class Course {
 
 
 
-    public Course(String name, String town, int rating) {
+    public Course(String name, String town, double rating) {
         this.name = name;
         this.town = town;
         this.rating = rating;
